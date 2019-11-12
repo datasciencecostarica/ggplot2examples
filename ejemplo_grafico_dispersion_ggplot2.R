@@ -1,0 +1,15 @@
+#Ejemplo graficos de dispersion con ggplot2
+
+y<-c(4.511000156,5.373000145,3.927000046,3.953999996,4.045000076,5.176000118,6.162000179,5.681000233,5.327000141,5.894999981,5.081999779,5.914999962,6.334000111,6.558000088,6.390999794,6.571000099,5.739999771,4.489999771,4.781000137,7.712999821,7.170800209,10.13939953)
+
+x<-c(1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011)
+
+dataset<-data.frame(x,y)
+
+dataset
+
+library(ggplot2)
+
+graph<-ggplot(dataset,aes(x,y))+geom_point(aes())+labs(title="Desempleo total (estimación nacional) en Costa Rica, por años",y="Porcentaje de desempleo",x="Año")+theme_classic()
+
+graph
